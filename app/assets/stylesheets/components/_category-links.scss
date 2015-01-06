@@ -24,14 +24,18 @@
 	justify-content:space-around;
 	li {
 		flex:1 0 50%;
-		border:1px solid $brand-primary;
-		padding:10px;
+		border:1px solid $gray-light;
 		text-align:center;
+		background:white;
+		transition:.25s ease;
 		a {
+			color:$gray-light;
+			padding:10px;
 			display:block;
 		}
 		&:hover {
 			background:$brand-primary;
+			border-color:$brand-primary;
 			a {
 				color:white;
 			}
