@@ -1,0 +1,40 @@
+.row
+	%div.col-sm-12.back-link
+		= link_to root_path do
+			= fa_icon 'chevron-left'
+			Back
+
+.card.recipe-header
+	.row
+		.col-md-4.col-sm-6
+			= image_tag @recipe.image.url(:medium, class: "recipe-image")
+		.col-md-8.col-sm-6
+			%h1= @recipe.title
+			.recipe-category.btn.btn-default(disabled="disabled")
+				= @recipe.category.category
+			.recipe-meta
+				Published on
+				= @recipe.created_at.strftime("%b %e, %Y")
+				by
+				= link_to @recipe.user.username, user_path(@recipe.user)
+			%p= @recipe.description
+			- if @recipe.user == current_user
+				= link_to "Edit", edit_recipe_path, class: "btn btn-default"
+				= link_to "Delete Recipe", recipe_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
+
+.row
+	.col-md-5
+		.card.ingredients
+			%h2.card-title Ingredients
+			%ul
+				- @recipe.ingredients.each do |ingredient|
+					%li.ingredient
+						= fa_icon "caret-right"
+						%span.name= ingredient.name
+	.col-md-7
+		.card.directions
+			%h2.card-title Directions
+			%ol
+				- @recipe.directions.each do |direction|
+					%li
+						= direction.step

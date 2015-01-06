@@ -1,0 +1,14 @@
+.row
+	.recipe-grid
+		- @recipe.each do |recipe|
+			.recipe-wrap
+				.recipe
+					= link_to recipe do
+						.image-wrap
+							= image_tag recipe.image.url(:medium)
+					.description
+						%h3= link_to recipe.title, recipe
+						%p= truncate(recipe.description,length: 125)
+						= link_to recipe do
+							View Recipe
+							=fa_icon 'chevron-right'

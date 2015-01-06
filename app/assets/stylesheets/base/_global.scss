@@ -1,0 +1,81 @@
+html, body {
+	height:100%;
+}
+
+body {
+	background: $gray-lighter;
+	font-size:17px;
+	font-family:'Arvo';
+}
+
+.wrapper {
+	@include bp(sm) {
+		display:flex;
+		min-height:100%;
+	}
+}
+
+.main-content {
+	margin-bottom:40px;
+	@include bp(sm){
+		flex:1 1 auto;
+		padding-top:15px;
+	}
+}
+
+.container {
+	@include bp(sm){
+	width:80%;
+	}
+}
+
+a {
+	color:$brand-primary;
+	text-decoration:none;
+	&:hover,
+	&:focus {
+		color:darken($brand-primary, 20%);
+		text-decoration:none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+}
+
+.back-link {
+	margin-bottom:15px;
+}
+
+h1.title {
+	margin-bottom:25px;
+	span {
+		color:$gray;
+		font-weight:normal;
+	}
+}
+
+img {
+	max-width:100%;
+	width:100%;
+	height:auto;
+}
+
+select, input {
+	font-size:16px;
+}
+
+textarea {
+  resize: vertical;
+  display:block;
+}
+
+abbr[title] {
+	display:none;
+}
+
+.recipe, .card {
+	background:white;
+	margin-bottom:20px;
+	box-shadow: 0 2px 4px 2px rgba($gray,.25);
+}

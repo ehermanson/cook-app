@@ -1,0 +1,46 @@
+.user-header {
+	margin-bottom:40px;
+	@include bp(sm){
+		display:flex;
+		flex-wrap:wrap;
+		align-items:center;
+	}
+}
+
+.avatar img {
+	border-radius:50%;
+	box-shadow:0 1px 2px rgba($gray,.25);
+}
+
+.user-avatar {
+	flex:0 1 auto;
+	margin-right:20px;
+	text-align:center;
+	margin-bottom:20px;
+	@include bp(sm) {
+		margin-bottom:0;
+	}
+	img {
+		width:150px;
+	}
+}
+
+.avatar-thumb {
+	text-align:center;
+	margin-bottom:15px;
+	img {
+		width:auto;
+	}
+}
+
+.user-info {
+	flex:1 0 auto;
+	margin-bottom:0;
+	text-align:center;
+	h1 {
+		margin-top:0;
+	}
+	@include bp(sm) {
+		text-align:left;
+	}
+}

@@ -1,0 +1,80 @@
+// Recipe View
+
+.rating {
+	margin-bottom:1em;
+}
+
+.recipe-category {
+	font-size:1.4rem;
+	margin:5px 0 15px;
+}
+
+.recipe-meta {
+	background:$gray-lighter;
+	padding:.5em;
+	margin-bottom:1em;
+	@include bp(md){
+		@include clearfix;
+		.author {
+			float:left;
+		}
+		.date {
+			float:right;
+		}
+	}
+}
+
+.recipe-image {
+	margin:0 auto;
+}
+
+.ingredients {
+	ul {
+		padding:0;
+		list-style:none;
+	}
+	li {
+		padding:10px 0;
+		border-bottom:1px solid $gray-lighter;
+		margin-left:20px;
+		position:relative;
+		i {
+			position:absolute;
+			left:-20px;
+			color:$brand-primary;
+			margin-right:5px;
+			line-height:1.6;
+		}
+	}
+}
+
+.card {
+	padding:15px;
+}
+
+.directions ol {
+	list-style:none;
+	padding-left:0;
+	counter-reset: directions-counter;
+
+	li {
+		margin-left:50px;
+		margin-bottom:20px;
+		position:relative;
+		padding:10px 0;
+	}
+	li:before {
+		position:absolute;
+		content: counter(directions-counter);
+		counter-increment: directions-counter;
+		left:-50px;
+		top:5px;
+		font-size:22px;
+		border: 2px solid $brand-primary;
+		border-radius: 50%;
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+	}
+}

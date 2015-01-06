@@ -1,0 +1,83 @@
+.form-control {
+	max-width:100%;
+	border-radius:0;
+}
+
+// Edit Recipe Views
+
+.recipe-details .input {
+	margin-bottom:20px;
+}
+
+.nested-fields {
+	margin-bottom:20px;
+	padding:10px 0;
+	border-bottom:1px solid $gray-lighter;
+	label {
+		font-size:1.25rem;
+	}
+}
+
+#directions, #ingredients {
+	label {
+		display:none;
+	}
+	.remove_fields {
+		opacity:0;
+		background:$gray-lighter;
+		border:1px solid darken($gray-lighter,10%);
+		box-shadow:0 1px 3px rgba($gray,.2);
+		text-align:center;
+		transition:.25s ease;
+		border-radius:50%;
+		height:30px;
+		width:30px;
+		color:$gray-light;
+		line-height:1.75;
+		&:hover {
+			color:$gray;
+		}
+	}
+	.nested-fields {
+		display:flex;
+		align-items:flex-start;
+		&:hover .remove_fields {
+			opacity:1;
+		}
+	}
+	.input {
+		flex:1;
+		margin-right:20px;
+	}
+}
+
+#directions {
+	textarea {
+		width:100%;
+	}
+}
+
+// Sign-In/Up
+
+.form-inputs {
+	.input {
+		margin-bottom:15px;
+	}
+	input[type="checkbox"] {
+		margin-right:5px;
+	}
+	span.hint {
+		font-size:1.5rem;
+		color:$gray-light;
+	}
+}
+.form-actions {
+	margin-bottom:15px;
+}
+
+.form-title {
+	margin-bottom:15px;
+	padding-bottom:15px;
+	border-bottom:4px solid $brand-primary;
+	text-align:center;
+}

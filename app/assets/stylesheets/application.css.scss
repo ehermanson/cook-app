@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ */
+
+@mixin bp($point) {
+	@if $point == xs {
+		@media (min-width : $screen-xs-min) { @content; } // 480
+	}
+	@if $point == xs-only {
+		@media (max-width : $screen-xs-min) { @content; } // 768
+	}
+	@if $point == sm {
+		@media (min-width : $screen-sm-min) { @content; } // 768
+	}
+	@if $point == sm-only {
+		@media (max-width : $screen-sm-min) { @content; } // 768
+	}
+	@if $point == sm-md {
+		@media (min-width : 45em) { @content; } // 992
+	}
+	@if $point == md {
+		@media (min-width : $screen-md-min) { @content; } // 992
+	}
+	@else if $point == lg {
+		@media (min-width : $screen-lg-min) { @content; } // 1200
+	}
+}
+
+$brand-primary: #D81926;
+$link-hover-color: darken($brand-primary,5%);
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+@import "components/btn";
+@import "components/alerts";
+@import "components/forms";
+@import "components/nav";
+@import "components/category-links";
+@import "base/global";
+@import "pages/recipe-grid";
+@import "pages/recipe-full";
+@import "pages/user-show";

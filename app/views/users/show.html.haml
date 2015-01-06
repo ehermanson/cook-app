@@ -1,0 +1,21 @@
+.user-header
+	.avatar.user-avatar
+		= image_tag @user.avatar.url(:medium)
+	.user-info.card
+		%h1= @user.username
+		%p
+			Member Since:
+			= @user.created_at.strftime("%b %e, %Y")
+		%p
+			= pluralize(@user.recipes.count, "Recipe")
+			Published
+.row
+	.recipe-grid
+		- @user.recipes.each do |recipe|
+			.recipe-wrap
+				.recipe
+					.image-wrap
+						= link_to recipe do
+							= image_tag recipe.image.url(:medium)
+					.description
+						%h3= link_to recipe.title, recipe
