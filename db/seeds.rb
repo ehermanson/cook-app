@@ -6,14 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-category_list = [
-	["Breakfast"],
-	["Lunch"],
-	["Dinner"],
-	["Appetizer"],
-	["Dessert"]
-]
-
-category_list.each do |name|
-	Category.create( category: name)
-end
+Category.create(category: "Breakfast" )
+Category.create(category: "Lunch" )
+Category.create(category: "Dinner" )
+Category.create(category: "Appetizer" )
+Category.create(category: "Dessert" )
