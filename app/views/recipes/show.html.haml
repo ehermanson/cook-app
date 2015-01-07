@@ -17,7 +17,7 @@
 				= @recipe.created_at.strftime("%b %e, %Y")
 				by
 				= link_to @recipe.user.username, user_path(@recipe.user)
-			%p= @recipe.description
+			%p= simple_format(@recipe.description)
 			- if @recipe.user == current_user
 				= link_to "Edit", edit_recipe_path, class: "btn btn-default"
 				= link_to "Delete Recipe", recipe_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
