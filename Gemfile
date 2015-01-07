@@ -20,6 +20,8 @@ gem 'cocoon', '~> 1.2.6'
 gem 'devise', '~> 3.4.1'
 gem 'activeadmin', github: 'activeadmin'
 gem 'jquery-turbolinks'
+gem 'aws-sdk', '~> 1.20.0'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
