@@ -1,5 +1,7 @@
-== Cook
+= Cook
 
 This is a sample recipe application I developed to help learn Ruby on Rails.
 
-Working demo coming soon...
+== DEMO
+
+https://cook-app.herokuapp.com/
