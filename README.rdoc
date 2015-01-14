@@ -1,7 +1,9 @@
 = Cook
 
-This is a sample recipe application I developed to help learn Ruby on Rails.
+This is a sample application I developed to help myself learn Ruby on Rails. It provides basic user sign-up/login functionality and nested forms for user submitted-recipes. Images are stored on Amazon S3. I'll be adding features to this app over time to continue learning Rails.
 
 == DEMO
 
-https://cook-app.herokuapp.com/
+Cook is intended solely for demo purposes - but feel free to sign up and use it if you want a place to keep your recipes online!
+
+http://cookappe68f.ninefold-apps.com/
