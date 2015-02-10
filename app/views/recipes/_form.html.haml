@@ -24,7 +24,7 @@
 	.row
 		.col-md-6
 			.card
-				%h3 Ingredients
+				%h3.card-title Ingredients
 				#ingredients
 					= f.simple_fields_for :ingredients do |ingredient|
 						= render 'ingredient_fields', f: ingredient
@@ -33,7 +33,7 @@
 
 		.col-md-6
 			.card
-				%h3 Directions
+				%h3.card-title Directions
 				#directions
 					= f.simple_fields_for :directions do |direction|
 						= render 'direction_fields', f: direction

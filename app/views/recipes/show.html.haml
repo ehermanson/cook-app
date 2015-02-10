@@ -19,7 +19,7 @@
 .row
 	.col-md-5
 		.card.ingredients
-			%h2.card-title Ingredients
+			%h3.card-title Ingredients
 			%ul
 				- @recipe.ingredients.each do |ingredient|
 					%li.ingredient
@@ -27,7 +27,7 @@
 						%span.name= ingredient.name
 	.col-md-7
 		.card.directions
-			%h2.card-title Directions
+			%h3.card-title Directions
 			%ol
 				- @recipe.directions.each do |direction|
 					%li
